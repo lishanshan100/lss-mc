@@ -1,0 +1,681 @@
+@charset "UTF-8";
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img, input {
+  margin: 0;
+  padding: 0; }
+
+input, button, select, textarea {
+  outline: none; }
+
+body {
+  font-size: 16px;
+  font-family: "微软雅黑"; }
+
+ul, ol, li {
+  list-style: none; }
+
+b, strong {
+  font-weight: normal; }
+
+em, i {
+  font-style: normal; }
+
+a, u {
+  text-decoration: none; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 16px;
+  font-weight: normal; }
+
+input {
+  outline: none; }
+
+img {
+  display: block;
+  border: 0; }
+
+fieldset {
+  border: 0; }
+
+textarea {
+  resize: none; }
+
+/* 封装好类名 */
+.border_none {
+  border: none !important; }
+
+.bg_none {
+  background: none !important; }
+
+.float_left {
+  float: left; }
+
+.float_right {
+  float: right; }
+
+/* 单行文本溢出省略号显示 */
+.text_ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+/* 各种居中 */
+/* 在浏览器窗口左右居中 */
+.fixed_center {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto; }
+
+/* 让子元素在父元素里面左右上下居中 */
+.dom_center {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto; }
+
+/* 万能清除法 */
+.clear_fix:after {
+  content: "";
+  clear: both;
+  display: block;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden; }
+
+.clear_fix {
+  zoom: 1; }
+
+main, footer {
+  width: 100%; }
+
+.headerWrap, .main, .infor {
+  width: 1210px;
+  margin: 0 auto;
+  user-select: none; }
+
+.headerWrap {
+  height: 160px;
+  padding: 10px 0;
+  position: relative; }
+
+.logo {
+  width: 460px;
+  height: 160px;
+  float: left; }
+
+.logo a:first-child {
+  display: inline-block;
+  width: 240px;
+  height: 100px;
+  margin-top: 15px; }
+
+.logo a:first-child img {
+  height: 70px; }
+
+.logo a:last-child {
+  display: inline-block;
+  width: 140px;
+  height: 100px;
+  margin-left: 40px; }
+
+.logo a img {
+  width: 100%;
+  height: 100%; }
+
+.search {
+  width: 470px;
+  height: 40px;
+  margin-top: 65px;
+  float: left;
+  display: flex; }
+
+.search p {
+  width: 70px;
+  color: #666;
+  background-color: #fff;
+  border: 2px solid #e23435;
+  border-right: none;
+  font-size: 14px;
+  text-align: center;
+  line-height: 40px;
+  float: left;
+  cursor: pointer; }
+
+.search input {
+  width: 100%;
+  height: 36px;
+  border: 2px solid #e23435;
+  border-left: none;
+  border-right: none;
+  display: block;
+  float: left;
+  text-indent: 1em; }
+
+.search button {
+  width: 126px;
+  height: 40px;
+  background-color: #e23435;
+  border: 2px solid #e23435;
+  color: #fff;
+  display: block;
+  float: left;
+  font-size: 16px;
+  cursor: pointer; }
+
+.menu {
+  position: absolute;
+  right: 30px;
+  top: 0; }
+
+.menu a {
+  display: block;
+  float: left;
+  padding: 0 9px;
+  margin-top: 10px;
+  font-size: 12px;
+  color: #666;
+  height: 16px;
+  line-height: 16px;
+  border-right: 1px solid #e2e2e2;
+  cursor: pointer; }
+
+.menu a:hover {
+  background-color: #fff;
+  color: #0d84d4; }
+
+.menu a:first-child {
+  color: #e23435; }
+
+.menu a:last-child {
+  border-right: none; }
+
+.car span {
+  display: block;
+  width: 125px;
+  height: 39px;
+  background-color: #fff;
+  border: 1px solid #f0f0f0;
+  position: absolute;
+  top: 75px;
+  right: 0;
+  font-size: 12px;
+  line-height: 39px;
+  color: #666;
+  text-align: center;
+  cursor: pointer;
+  z-index: 6; }
+
+.car:hover span {
+  color: #0d84d4; }
+
+.nav {
+  width: 240px;
+  position: absolute;
+  top: 140px;
+  left: 0;
+  z-index: 999; }
+
+.nav-l h3 {
+  width: 240px;
+  height: 40px;
+  background-color: #e23435;
+  font-size: 16px;
+  color: white;
+  line-height: 40px;
+  text-indent: 3em; }
+
+.nav-l li {
+  width: 240px;
+  height: 55.4px; }
+
+.nav-l li a {
+  display: block;
+  height: 55.4px;
+  background-color: rgba(0, 0, 0, 0.4);
+  font-size: 14px;
+  line-height: 55.4px;
+  color: #fff;
+  text-indent: 4em;
+  margin: 0;
+  padding: 0; }
+
+.nav-l li:hover a {
+  background-color: #fff;
+  color: #e23435;
+  transition: 0.5s; }
+
+.nav-r {
+  width: 400px;
+  height: 443.2px;
+  background-color: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  top: 40px;
+  left: 240px;
+  z-index: 999;
+  display: none; }
+
+.nav-r a {
+  display: block;
+  width: 100px;
+  height: 30px;
+  margin: 10px;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+  color: black; }
+
+.nav-l:hover .nav-r {
+  display: block; }
+
+.nav-l:hover .nav-r a:hover {
+  color: #e23435; }
+
+footer {
+  height: 211px;
+  background: #eee;
+  clear: both; }
+
+.infor {
+  height: 211px; }
+
+.infor .dividing {
+  display: block;
+  width: 100%;
+  height: 30px;
+  background-color: #eee;
+  border-bottom: 1px solid #d2d2d2; }
+
+.infor .links {
+  width: 755px;
+  height: 180px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  float: left; }
+
+.links li {
+  font-size: 12px;
+  line-height: 26px; }
+
+.links li a {
+  color: #8c8c8c; }
+
+.links ul li:hover a {
+  color: #0d84d4; }
+
+.links ul li:first-of-type {
+  height: 54px;
+  font-size: 16px;
+  line-height: 54px;
+  color: #333;
+  margin-top: 7px; }
+
+.service {
+  width: 356px;
+  float: right;
+  display: flex;
+  justify-content: space-between; }
+
+.tele {
+  padding-top: 26px; }
+
+.tele h5 {
+  height: 12px;
+  font-size: 12px;
+  line-height: 12px;
+  color: #8c8c8c; }
+
+.tele p {
+  height: 14px;
+  font-size: 14px;
+  line-height: 14px;
+  color: #0689e1;
+  margin: 14px 0 16px; }
+
+.tele a {
+  display: block;
+  width: 130px;
+  height: 30px;
+  background-color: #0689e1;
+  font-size: 14px;
+  line-height: 30px;
+  color: #fff;
+  text-align: center;
+  pointer-events: none; }
+
+.code {
+  width: 110px;
+  height: 110px;
+  margin-top: 20px; }
+
+.code img {
+  width: 100%;
+  height: 100%; }
+
+.copy {
+  height: 120px;
+  background: #4f4f4f; }
+
+.copy p {
+  width: 1210px;
+  font-size: 12px;
+  line-height: 32px;
+  color: #b5b5b5;
+  padding-top: 35px;
+  margin: 0 auto;
+  text-align: center; }
+
+.copy p a {
+  color: #b5b5b5; }
+
+.copy p a:hover {
+  color: #fff; }
+
+.anchor {
+  width: 44px;
+  min-height: 228px;
+  position: fixed;
+  right: 20px;
+  top: 35%;
+  z-index: 5; }
+
+.anchor a {
+  display: block;
+  width: 36px;
+  height: 38px;
+  box-shadow: 2px 1px 4px #333;
+  margin: 4px; }
+
+.anchor a:nth-child(2) {
+  background: url(../img/anchor-20.jpg) no-repeat; }
+
+.anchor a:nth-child(2):hover {
+  background: url(../img/anchor-21.jpg) no-repeat; }
+
+.bannerWrap {
+  height: 443px;
+  background-color: #f63331; }
+  .bannerWrap .ban-cont {
+    position: relative;
+    width: 870px;
+    height: 443px;
+    margin: 0 auto; }
+    .bannerWrap .ban-cont .banner {
+      height: 443px;
+      background-color: #FFF;
+      overflow: hidden;
+      position: relative; }
+      .bannerWrap .ban-cont .banner li {
+        width: 870px;
+        height: 443px; }
+      .bannerWrap .ban-cont .banner li a {
+        position: absolute;
+        top: 0;
+        display: block;
+        width: 870px;
+        height: 443px;
+        background-color: darkorange; }
+        .bannerWrap .ban-cont .banner li a img {
+          width: 100%;
+          height: 100%; }
+    .bannerWrap .ban-cont .ban-btn {
+      width: 90px;
+      height: 10px;
+      position: absolute;
+      bottom: 15px;
+      left: 50%;
+      margin-left: -45px;
+      display: flex;
+      justify-content: space-between; }
+      .bannerWrap .ban-cont .ban-btn span {
+        display: block;
+        width: 10px;
+        height: 10px;
+        background-color: rgba(0, 0, 0, 0.4);
+        border-radius: 50%; }
+        .bannerWrap .ban-cont .ban-btn span:hover {
+          background-color: orange; }
+      .bannerWrap .ban-cont .ban-btn .ban-active {
+        background-color: orange; }
+    .bannerWrap .ban-cont .sidebar {
+      width: 200px;
+      height: 400px;
+      background-color: #fff;
+      position: absolute;
+      top: 21px;
+      right: -169px; }
+      .bannerWrap .ban-cont .sidebar .message .portrait {
+        width: 60px;
+        height: 60px;
+        margin: 10px auto 0;
+        border-radius: 50%;
+        overflow: hidden; }
+        .bannerWrap .ban-cont .sidebar .message .portrait img {
+          width: 100%;
+          height: 100%; }
+      .bannerWrap .ban-cont .sidebar .message p {
+        height: 42px;
+        font-size: 12px;
+        line-height: 38px;
+        text-align: center; }
+      .bannerWrap .ban-cont .sidebar .message button {
+        display: block;
+        width: 90px;
+        height: 28px;
+        border: 1px solid #e23435;
+        border-radius: 14px;
+        background-color: #e23435;
+        color: #fff;
+        margin: 0 auto; }
+        .bannerWrap .ban-cont .sidebar .message button:hover {
+          background-color: #0d84d4; }
+      .bannerWrap .ban-cont .sidebar .message a:last-child {
+        display: block;
+        width: 200px;
+        font-size: 12px;
+        line-height: 47px;
+        text-align: center;
+        color: #666; }
+        .bannerWrap .ban-cont .sidebar .message a:last-child:hover {
+          color: #0d84d4; }
+      .bannerWrap .ban-cont .sidebar .notice dt {
+        height: 30px;
+        font-size: 12px;
+        line-height: 30px;
+        color: #0d84d4;
+        text-align: center;
+        border-top: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+        overflow: hidden; }
+      .bannerWrap .ban-cont .sidebar .notice dd {
+        height: 30px; }
+        .bannerWrap .ban-cont .sidebar .notice dd a {
+          font-size: 12px;
+          line-height: 30px;
+          color: #666;
+          margin-left: 30px; }
+
+.goods {
+  min-height: 150px;
+  background-color: #f5f5f5;
+  padding-top: 27px; }
+  .goods .goods-adver {
+    width: 1210px;
+    height: 150px;
+    margin: 0 auto; }
+    .goods .goods-adver img {
+      width: 100%;
+      height: 100%; }
+  .goods .goods-category {
+    width: 1210px;
+    margin: 15px auto 0; }
+    .goods .goods-category .goods-title {
+      height: 45px;
+      background-color: #f4e0d0; }
+      .goods .goods-category .goods-title h4 {
+        margin-top: 10px;
+        height: 29px;
+        font-size: 18px;
+        line-height: 29px;
+        border-left: 5px solid #80ffff;
+        float: left;
+        text-indent: 1em; }
+      .goods .goods-category .goods-title a {
+        float: right;
+        font-size: 12px;
+        line-height: 45px;
+        margin-right: 25px;
+        color: #666; }
+    .goods .goods-category .category {
+      min-height: 250px;
+      padding-left: 4px;
+      padding-bottom: 6px;
+      background-color: #fff;
+      border-bottom: 1px solid #eee; }
+      .goods .goods-category .category dl {
+        width: 239px;
+        min-height: 250px;
+        border: 1px solid #eee;
+        margin-top: 6px;
+        border-right: none;
+        float: left;
+        font-size: 12px; }
+      .goods .goods-category .category dl:nth-of-type(5n) {
+        border-right: 1px solid #eee; }
+      .goods .goods-category .category dl:last-child {
+        border-right: 1px solid #eee; }
+      .goods .goods-category .category dt {
+        width: 180px;
+        height: 180px;
+        margin: 10px auto 0; }
+        .goods .goods-category .category dt img {
+          width: 100%;
+          height: 100%; }
+      .goods .goods-category .category dd {
+        height: 28px;
+        line-height: 28px;
+        text-align: center; }
+      .goods .goods-category .category dl:hover dd {
+        color: #0d84d4; }
+      .goods .goods-category .category span {
+        display: block;
+        width: 100%;
+        color: #ff0000;
+        font-weight: bold;
+        text-align: center; }
+  .goods .goods-category:last-child {
+    padding-bottom: 80px; }
+
+.landing {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 1000;
+  display: none; }
+  .landing .landingWrap {
+    width: 346px;
+    height: 436px;
+    background-color: #fff;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto; }
+  .landing h3 {
+    width: 326px;
+    height: 42px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    line-height: 42px;
+    color: #333;
+    padding-left: 20px; }
+    .landing h3 button {
+      display: block;
+      width: 16px;
+      height: 42px;
+      background-color: #f8f8f8;
+      border: none;
+      float: right;
+      padding: 0;
+      margin-right: 13px;
+      font-size: 16px; }
+      .landing h3 button:hover {
+        color: #e23435; }
+  .landing p {
+    height: 48px; }
+    .landing p b {
+      display: block;
+      height: 48px;
+      font-size: 12px;
+      line-height: 48px;
+      color: #999;
+      float: left;
+      margin-left: 30px; }
+    .landing p a {
+      display: block;
+      height: 48px;
+      font-size: 12px;
+      line-height: 48px;
+      color: #e23435;
+      float: left; }
+  .landing .login_tit {
+    width: 286px;
+    height: 34px;
+    border-bottom: 1px solid #e23435;
+    margin-top: 10px;
+    margin-left: 30px; }
+    .landing .login_tit span {
+      display: block;
+      width: 82px;
+      height: 32px;
+      background-color: #fff;
+      font-size: 12px;
+      line-height: 35px;
+      text-align: center;
+      color: #e23435;
+      border-top: 2px solid #e23435;
+      border-left: 1px solid #e23435;
+      border-right: 1px solid #e23435;
+      border-bottom: 1px solid #fff; }
+  .landing input {
+    width: 284px;
+    height: 38px;
+    margin: 30px 30px 0;
+    border: 1px solid #ddd;
+    text-indent: 3em;
+    font-size: 12px;
+    line-height: 38px;
+    color: #666; }
+    .landing input:first-child {
+      background: url(./img/loginpage-1.jpg) no-repeat left top; }
+    .landing input:last-child {
+      background: url(./img/loginpage-2.jpg) no-repeat left top; }
+  .landing .tips {
+    display: block;
+    height: 12px;
+    font-size: 12px;
+    line-height: 12px;
+    margin-top: 20px;
+    text-align: center; }
+  .landing .login_btn {
+    display: block;
+    width: 286px;
+    height: 37px;
+    border: none;
+    background-color: #e23435;
+    margin: 30px;
+    color: #fff; }
+    .landing .login_btn:hover {
+      background-color: #0d84d4; }

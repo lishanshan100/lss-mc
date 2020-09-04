@@ -1,0 +1,154 @@
+@import "base";
+html,body{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+header{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    background-color: #fff;
+}
+.headerWrap{
+    width: 1210px;
+    height: 100px;
+    margin: 0 auto;
+    .logo{
+        width: 270px;
+        height: 50px;
+        padding: 25px 50px;
+        float: left;
+        a{
+            display: block;
+            width: 170px;
+            height: 50px;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    p{
+        width: 120px;
+        height: 100px;
+        font-size: 12px;
+        line-height: 100px;
+        color: #666;
+        float: right;
+        margin-right: 50px;
+        text-align: right;
+        a{
+            color: #0d84d4;
+        }
+    }
+    
+}
+footer{
+    width: 100%;
+    height: 92px;
+    position: absolute;
+    bottom: 0;
+    padding: 30px 0 0 15px;
+    background-color: #fff;
+}
+.nav{
+    width: 551px;
+    height: 12px;
+    margin: 0 auto;
+    a{
+        display: block;
+        float: left;
+        font-size: 12px;
+        line-height: 12px;
+        color: #666;
+        border-right: 1px solid #666;
+        padding: 0 10px;
+        &:last-child{
+            border-right: none;
+        }
+    }
+}
+.copy{
+    width: 400px;
+    height: 40px;
+    font-size: 12px;
+    line-height: 20px;
+    color: #999;
+    text-align: center;
+    margin: 20px auto;
+    a{
+        color: #999;
+    }
+}
+
+main{
+    width: 100%;
+    height: 100%;
+    .mainWrap{
+        position: absolute;
+        top: 20%;
+        width: 100%;
+        min-height: 500px;
+        background-color: #0d84d4;
+        .login{
+            width: 400px;
+            height: 440px;
+            background-color: #fff;
+            position: absolute;
+            top: 30px;
+            right: 21%;
+            h2{
+                width: 100%;
+                height: 60px;
+                font-size: 18px;
+                line-height: 70px;
+                text-indent: 40px;
+                margin-bottom: 10px;
+            }
+            .inputBox{
+                padding-top: 25px;
+                input{
+                display: block;
+                width: 300px;
+                height: 40px;
+                border: 1px solid #999;
+                margin: 30px auto 15px;
+                text-indent: 50px;
+                }
+                span{
+                    display: block;
+                    height: 12px;
+                    font-size: 12px;
+                    line-height: 12px;
+                    margin-bottom: 15px;
+                    margin-left: 75px;
+                }
+            }
+            a{
+                display: block;
+                height: 20px;
+                line-height: 20px;
+                font-size: 14px;
+                color: black;
+                margin-left: 270px;
+            }
+            
+            button{
+                display: block;
+                width: 250px;
+                height: 50px;
+                margin: 30px auto 0;
+                padding: 0;
+                border: none;
+                color: #fff;
+                font-size: 16px;
+                background-color: #0d84d4;
+                &:hover{
+                    background-color: #1373b4;
+                }
+            }
+        }
+    }
+}

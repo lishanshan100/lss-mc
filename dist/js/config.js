@@ -1,0 +1,1 @@
+"use strict";require.config({paths:{jquery:"../utils/jquery-1.11.3",jqCookie:"../utils/jquery_cookie"},shim:{"jquery-cookie":["jquery"],parabola:{exports:"_"}}}),require(["jquery"],function(e){var r=e("#current-page").attr("current-page");require([r],function(e){e.init()})});

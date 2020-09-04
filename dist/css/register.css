@@ -1,0 +1,232 @@
+@charset "UTF-8";
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img, input {
+  margin: 0;
+  padding: 0; }
+
+input, button, select, textarea {
+  outline: none; }
+
+body {
+  font-size: 16px;
+  font-family: "微软雅黑"; }
+
+ul, ol, li {
+  list-style: none; }
+
+b, strong {
+  font-weight: normal; }
+
+em, i {
+  font-style: normal; }
+
+a, u {
+  text-decoration: none; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 16px;
+  font-weight: normal; }
+
+input {
+  outline: none; }
+
+img {
+  display: block;
+  border: 0; }
+
+fieldset {
+  border: 0; }
+
+textarea {
+  resize: none; }
+
+/* 封装好类名 */
+.border_none {
+  border: none !important; }
+
+.bg_none {
+  background: none !important; }
+
+.float_left {
+  float: left; }
+
+.float_right {
+  float: right; }
+
+/* 单行文本溢出省略号显示 */
+.text_ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+/* 各种居中 */
+/* 在浏览器窗口左右居中 */
+.fixed_center {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto; }
+
+/* 让子元素在父元素里面左右上下居中 */
+.dom_center {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto; }
+
+/* 万能清除法 */
+.clear_fix:after {
+  content: "";
+  clear: both;
+  display: block;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden; }
+
+.clear_fix {
+  zoom: 1; }
+
+header {
+  height: 100px;
+  background-color: #fff; }
+
+.logo {
+  width: 900px;
+  height: 90px;
+  margin: 0 auto; }
+  .logo a {
+    display: block;
+    width: 170px;
+    height: 50px;
+    padding: 20px 20px 20px 10px; }
+    .logo a img {
+      width: 100%;
+      height: 100%; }
+
+.form {
+  width: 1208px;
+  height: 490px;
+  margin: 15px auto 0;
+  position: relative; }
+  .form .form-title {
+    width: 1210px;
+    height: 45px;
+    position: absolute;
+    z-index: 999; }
+    .form .form-title p {
+      width: 128px;
+      height: 42px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-top: 2px solid #e23435;
+      border-bottom: none;
+      margin-left: 100px;
+      font-size: 14px;
+      line-height: 42px;
+      text-align: center;
+      color: #e23435;
+      float: left; }
+    .form .form-title span {
+      float: right;
+      font-size: 12px;
+      line-height: 45px;
+      color: #666;
+      margin-right: 20px; }
+      .form .form-title span a {
+        color: #e23435; }
+        .form .form-title span a:hover {
+          color: #0d84d4; }
+  .form .form-content {
+    width: 1208px;
+    height: 400px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    position: absolute;
+    top: 43px;
+    padding-top: 43px; }
+    .form .form-content div {
+      height: 40px;
+      margin-bottom: 25px;
+      margin-left: 100px; }
+      .form .form-content div:nth-child(3) {
+        margin-bottom: 15px; }
+      .form .form-content div input {
+        width: 260px;
+        height: 38px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 2px;
+        float: left;
+        font-size: 12px;
+        text-indent: 15px;
+        margin-left: 20px; }
+      .form .form-content div label {
+        display: block;
+        width: 80px;
+        height: 40px;
+        font-size: 14px;
+        line-height: 40px;
+        float: left;
+        text-align: right; }
+      .form .form-content div span {
+        float: left;
+        font-size: 12px;
+        line-height: 40px;
+        margin-left: 15px; }
+      .form .form-content div b {
+        float: left;
+        font-size: 12px;
+        font-weight: bold;
+        line-height: 40px;
+        margin-left: 15px;
+        display: none; }
+    .form .form-content .agreement {
+      margin-left: 135px; }
+      .form .form-content .agreement input {
+        display: block;
+        width: 12px;
+        float: left;
+        margin-left: 30px; }
+      .form .form-content .agreement span {
+        display: block;
+        width: 180px;
+        height: 40px;
+        font-size: 12px;
+        line-height: 37px;
+        margin-left: 10px;
+        color: #666;
+        float: left; }
+        .form .form-content .agreement span a {
+          color: #666; }
+          .form .form-content .agreement span a:hover {
+            color: #0d84d4; }
+    .form .form-content .tips {
+      margin: 0 0 20px 190px;
+      display: none;
+      font-size: 14px;
+      line-height: 14px; }
+    .form .form-content .button button {
+      display: block;
+      width: 262px;
+      height: 37px;
+      background-color: #e23435;
+      border: none;
+      color: #fff;
+      margin-left: 50px; }
+      .form .form-content .button button:hover {
+        background-color: #0d84d4; }
+
+footer p {
+  width: 1210px;
+  font-size: 12px;
+  line-height: 25px;
+  color: #666;
+  text-align: center;
+  margin: 15px auto; }
+  footer p a {
+    color: #666; }
+    footer p a:hover {
+      color: #e23435; }
